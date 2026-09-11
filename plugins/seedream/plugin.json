@@ -1,0 +1,23 @@
+﻿{
+    "name":  "seedream",
+    "version":  "0.3.0",
+    "description":  "Doubao-Seedream-4.0 image generation for PilotDeck",
+    "skills":  "skills",
+    "mcpServers":  {
+                       "seedream":  {
+                                        "command":  "node",
+                                        "args":  [
+                                                     "server.mjs"
+                                                 ],
+                                        "cwd":  ".",
+                                        "env":  {
+                                                    "PARATERA_API_KEY":  "${env:PARATERA_API_KEY}",
+                                                    "PILOTDECK_SEEDREAM_API_KEY":  "${env:PILOTDECK_SEEDREAM_API_KEY}",
+                                                    "PILOTDECK_SEEDREAM_BASE_URL":  "${env:PILOTDECK_SEEDREAM_BASE_URL}",
+                                                    "PILOTDECK_SEEDREAM_MODEL":  "${env:PILOTDECK_SEEDREAM_MODEL}"
+                                                },
+                                        "perSession":  true,
+                                        "callTimeoutMs":  300000
+                                    }
+                   }
+}
