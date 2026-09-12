@@ -13,15 +13,16 @@
 
 [在线 Demo](https://eggry.github.io/novel-scene-to-image-skill/frontend/?taskid=demo) · [系统架构图](frontend/architecture.svg)
 
+
+
+https://github.com/user-attachments/assets/0da2056a-7c2e-4b30-9d63-1d37ae23a7ac
+
+
+
 Demo 链接以仓库根目录部署到 GitHub Pages 为前提，需先启用 Pages。静态版回放一组真实任务的三轮生成记录，不连接后端、不调用模型；真实创作需运行 PilotDeck 与配套后端。
 
 前端无需构建，部署说明见 [frontend/README.md](frontend/README.md)。
 
-### 演示视频
-
-<video src="./demo.mp4" controls muted width="100%">
-  <a href="./demo.mp4">下载演示视频</a>
-</video>
 
 ## 安装与使用
 
