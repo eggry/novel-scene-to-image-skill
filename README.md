@@ -17,6 +17,12 @@ Demo 链接以仓库根目录部署到 GitHub Pages 为前提，需先启用 Pag
 
 前端无需构建，部署说明见 [frontend/README.md](frontend/README.md)。
 
+### 演示视频
+
+<video src="./demo.mp4" controls muted width="100%">
+  <a href="./demo.mp4">下载演示视频</a>
+</video>
+
 ## 安装与使用
 
 前置条件：已安装 PilotDeck、可运行 Node.js，并拥有可调用 Seedream 的 Paratera API Key。
