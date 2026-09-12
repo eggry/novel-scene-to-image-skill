@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<title>千图百炼系统架构：1 个编排 Skill、3 个子 Skill、1 个 Tool</title>
+<defs>
+ <marker id="a" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1 1L7 4L1 7" fill="none" stroke="#556574" stroke-width="1.4"/></marker>
+ <style>
+ text{font-family:"Microsoft YaHei","Noto Sans SC",sans-serif;fill:#233342}
+ .title{font-size:30px;font-weight:700}.h{font-size:20px;font-weight:600}.b{font-size:16px;fill:#647484}.code{font-family:Consolas,monospace;font-size:15px;fill:#496052}
+ .box{fill:#fff;stroke:#cad4dc;stroke-width:1.4}
+ .line{fill:none;stroke:#556574;stroke-width:1.4;marker-end:url(#a)}
+ .both{marker-start:url(#a)}
+ .control{fill:none;stroke:#8b9b93;stroke-width:1.3;stroke-dasharray:5 4}
+ </style>
+</defs>
+<rect width="1440" height="900" fill="#fff"/>
+<text x="60" y="64" class="title">千图百炼 · 系统架构</text>
+<text x="1380" y="62" text-anchor="end" class="b">自研 4 Skills + 1 Tool ｜ 集成 PilotDeck</text>
+
+<rect x="120" y="108" width="290" height="86" rx="8" class="box"/>
+<text x="265" y="144" text-anchor="middle" class="h">展示前端</text>
+<text x="265" y="172" text-anchor="middle" class="b">需求输入 · 过程可视化 · 结果展示</text>
+<rect x="575" y="108" width="290" height="86" rx="8" class="box"/>
+<text x="720" y="144" text-anchor="middle" class="h">后端适配层</text>
+<text x="720" y="172" text-anchor="middle" class="b">任务管理 · 事件与结果映射</text>
+<rect x="1030" y="108" width="290" height="86" rx="8" class="box"/>
+<text x="1175" y="144" text-anchor="middle" class="h">PilotDeck Gateway</text>
+<text x="1175" y="172" text-anchor="middle" class="b">会话创建 · 任务提交 · 执行事件</text>
+<path d="M418 157H567" class="line both"/>
+<text x="492" y="143" text-anchor="middle" class="b">HTTP / SSE</text>
+<path d="M873 157H1022" class="line both"/>
+<text x="947" y="143" text-anchor="middle" class="b">WebSocket</text>
+
+<rect x="60" y="265" width="1320" height="420" rx="12" fill="#fafcfb" stroke="#b9cbc1" stroke-width="1.4"/>
+<text x="88" y="300" class="h">PilotDeck Agent Loop</text>
+<text x="88" y="326" class="b">读取指令 · 决策 · 调用 · 观察 · 迭代</text>
+<path d="M1175 202V257" class="line both"/>
+<text x="1190" y="235" class="b">执行 / 反馈</text>
+
+<rect x="470" y="292" width="500" height="84" rx="8" fill="#eaf3ed" stroke="#6d957c" stroke-width="1.4"/>
+<text x="720" y="325" text-anchor="middle" class="h">Skill 1 · 端到端编排</text>
+<text x="720" y="352" text-anchor="middle" class="code">novel-scene-image</text>
+<text x="1090" y="329" text-anchor="middle" class="b">定义调用顺序与验收规则</text>
+<text x="1090" y="354" text-anchor="middle" class="b">由 Agent Loop 执行</text>
+
+<path d="M720 376V425M232 425H1207M232 425V463M557 425V463M882 425V463M1207 425V463" class="control"/>
+<text x="735" y="409" class="b">统一编排：3 个子 Skill + 1 个 Tool</text>
+<path d="M232 454V465M557 454V465M882 454V465M1207 454V465" fill="none" stroke="#8b9b93" stroke-width="1.3"/>
+<rect x="90" y="465" width="285" height="110" rx="8" class="box"/>
+<text x="232" y="496" text-anchor="middle" class="h">Skill 2 · 场景与提示词</text>
+<text x="232" y="523" text-anchor="middle" class="code">novel-scene-to-prompt</text>
+<text x="232" y="552" text-anchor="middle" class="b">原文 → SceneSpec + Prompt</text>
+
+<rect x="415" y="465" width="285" height="110" rx="8" fill="#fff8ec" stroke="#c8ac74" stroke-width="1.4"/>
+<text x="557" y="496" text-anchor="middle" class="h">Tool · 图片生成 / 编辑</text>
+<text x="557" y="523" text-anchor="middle" class="code">generate_image</text>
+<text x="557" y="552" text-anchor="middle" class="b">MCP · Doubao-Seedream-4.0</text>
+
+<rect x="740" y="465" width="285" height="110" rx="8" class="box"/>
+<text x="882" y="496" text-anchor="middle" class="h">Skill 3 · 图片质检</text>
+<text x="882" y="523" text-anchor="middle" class="code">scene-image-critic</text>
+<text x="882" y="552" text-anchor="middle" class="b">图片 + SceneSpec → 评审报告</text>
+
+<rect x="1065" y="465" width="285" height="110" rx="8" class="box"/>
+<text x="1207" y="496" text-anchor="middle" class="h">Skill 4 · 迭代优化</text>
+<text x="1207" y="523" text-anchor="middle" class="code">image-quality-refiner</text>
+<text x="1207" y="552" text-anchor="middle" class="b">评审报告 → 修订 Prompt</text>
+<path d="M380 520H410" class="line"/>
+<path d="M705 520H735" class="line"/>
+<path d="M1030 520H1060" class="line"/>
+<text x="1045" y="454" text-anchor="middle" class="b">未达标</text>
+<path d="M1207 581V627H557V581" class="line"/>
+<rect x="736" y="611" width="292" height="30" fill="#fafcfb"/>
+<text x="882" y="632" text-anchor="middle" class="b">修订 Prompt → 再次生成 / 编辑</text>
+<text x="88" y="660" class="b">达标或达到轮次上限，由 Skill 1 结束流程并交付结果</text>
+
+<path d="M720 693V757" class="line both"/>
+<text x="738" y="730" class="b">读写中间结果与最终产物</text>
+<rect x="270" y="765" width="900" height="88" rx="8" fill="#f1f5fa" stroke="#adbdce" stroke-width="1.4"/>
+<text x="720" y="800" text-anchor="middle" class="h">Workspace · 按任务 / 场景 / 轮次统一管理</text>
+<text x="720" y="830" text-anchor="middle" class="b">原文 · SceneSpec · Prompt · 图片 · 质检报告 · 修订记录 · 最终结果</text>
+</svg>
